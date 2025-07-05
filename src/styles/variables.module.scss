@@ -12,6 +12,7 @@ $light-red: #fde6eb;
 $green: #39cd62;
 $light-green: #f3fcf6;
 $inactive-gray: #545f7d26;
+$gray: #e6e7ec;
 
 :export {
   primaryColor: $primary-color;
@@ -28,4 +29,5 @@ $inactive-gray: #545f7d26;
   greenColor: $green;
   lightGreen: $light-green;
   inactiveGray: $inactive-gray;
+  grayColor:$gray
 }

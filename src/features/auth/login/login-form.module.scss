@@ -1,0 +1,32 @@
+@import "../../../styles/variables.module.scss";
+
+.form {
+  width: 100%;
+  max-width: 400px;
+  display: flex;
+  flex-flow: column wrap;
+  gap: 20px;
+  h2 {
+    color: $header-color;
+    font-weight: 700;
+    font-size: 40px;
+  }
+  p {
+    color: $text-color;
+    font-weight: 400;
+    font-size: 16px;
+    margin-bottom: 34px;
+  }
+}
+
+.forgotPassword {
+  margin-bottom: 30px;
+  color: $primary-color;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  //
+  &:hover {
+    text-decoration: underline;
+  }
+}
