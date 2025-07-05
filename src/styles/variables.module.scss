@@ -2,7 +2,6 @@ $primary-color: #39cdcc;
 $secondary-color: #f3fcfc;
 $header-color: #213f7d;
 $text-color: #545f7d;
-
 $white: #ffffff;
 $dashboard-color: #fbfbfb;
 $light-gray: #f5f5f7;
@@ -12,6 +11,7 @@ $red: #e4033b;
 $light-red: #fde6eb;
 $green: #39cd62;
 $light-green: #f3fcf6;
+$inactive-gray: #545f7d26;
 
 :export {
   primaryColor: $primary-color;
@@ -27,4 +27,5 @@ $light-green: #f3fcf6;
   redColor: $red;
   greenColor: $green;
   lightGreen: $light-green;
+  inactiveGray: $inactive-gray;
 }

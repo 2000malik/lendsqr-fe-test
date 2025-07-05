@@ -26,7 +26,11 @@ export default function AuthLayout({
           />
         </div>
       </div>
-      <div className={styles.rightSection}>{children}</div>
+      <div className={styles.rightSection}>
+        <div className={styles.rightSectionContainer}>
+          <div className={styles.rightSectionChild}>{children}</div>
+        </div>
+      </div>
     </div>
   );
 }
