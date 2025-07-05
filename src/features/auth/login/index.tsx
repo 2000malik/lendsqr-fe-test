@@ -11,19 +11,16 @@ export const Login = () => {
       <h2>Welcome!</h2>
       <p>Enter details to login.</p>
       {/* <div className={styles.inputGroup}> */}
-        <Input type="email" placeholder="Email" name="email" required />
-     
+      <Input type="email" placeholder="Email" name="email" required />
 
-     
-        <PasswordInput placeholder="Password" name="password" required />
-   
+      <PasswordInput placeholder="Password" name="password" required />
 
       <div className={styles.forgotPassword}>
         <Link href="#">FORGOT PASSWORD?</Link>
       </div>
 
       <Button type="submit">LOG IN</Button>
-       {/* </div> */}
+      {/* </div> */}
     </form>
   );
 };
