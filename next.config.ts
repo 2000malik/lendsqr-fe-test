@@ -1,10 +1,14 @@
 import type { NextConfig } from "next";
+import bundleAnalyzer from "@next/bundle-analyzer";
 
+const withBundleAnalyzer = bundleAnalyzer({
+  enabled: process.env.ANALYZE === "true",
+});
 const nextConfig: NextConfig = {
   /* config options here */
   sassOptions: {
-    implementation: 'sass-embedded',
-  }
+    implementation: "sass-embedded",
+  },
 };
 
-export default nextConfig;
+export default withBundleAnalyzer(nextConfig);
