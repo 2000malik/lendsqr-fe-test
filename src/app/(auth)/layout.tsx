@@ -19,9 +19,10 @@ export default function AuthLayout({
           <Image
             src="/assets/svgs/pablo-sign-in.svg"
             alt="sign-in-avatar"
-            width={600}
-            height={400}
             loading="lazy"
+            fill
+            style={{ objectFit: "contain" }}
+            priority={false}
           />
         </div>
       </div>
