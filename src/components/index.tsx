@@ -7,3 +7,4 @@ export { NavBar } from "./layouts/navbar";
 export { Main } from "./layouts/main";
 export { SideBar } from "./layouts/sidebar";
 export { Header } from "./header";
+export { SummaryCard } from "./cards/summary";
