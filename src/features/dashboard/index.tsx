@@ -1,7 +1,7 @@
 "use client";
 import React from "react";
 //
-import { Header, SummaryCard } from "@/src/components";
+import { Header, StatusChip, SummaryCard } from "@/src/components";
 //
 import { summaryCardData } from "./data";
 import styles from "./styles.module.scss";
@@ -14,7 +14,7 @@ export const Dashboard = () => {
         {summaryCardData.map(({ label, Icon, value }) => (
           <SummaryCard key={label} label={label} Icon={Icon} value={value} />
         ))}
-
+<StatusChip status="Active"/>
         
       </div>
     </div>
