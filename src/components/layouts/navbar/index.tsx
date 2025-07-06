@@ -9,7 +9,11 @@ import { Button } from "../../button";
 import styles from "./styles.module.scss";
 import { SearchInput } from "../../form/search-input";
 
-export const NavBar: React.FC = () => {
+type NavBarProps = {
+  isOpen: boolean;
+  onToggleSidebar?: () => void;
+};
+export const NavBar: React.FC<NavBarProps> = ({ isOpen, onToggleSidebar }) => {
   return (
     <header className={styles.header}>
       <div className={styles.rightSection}>
@@ -60,9 +64,9 @@ export const NavBar: React.FC = () => {
           </div>
         </Button>
       </div>
-      <Button className={styles.menuBtn}>
+      <Button className={styles.menuBtn} onClick={onToggleSidebar}>
         <Image
-          src="/assets/svgs/bar.svg"
+          src={!isOpen ? "/assets/svgs/bar.svg" : "/assets/svgs/close.svg"}
           alt="Logo"
           width={50}
           height={25}

@@ -10,9 +10,17 @@
   width: 270px;
   padding: 0;
   z-index: 1000;
-  overflow: hidden;
+  transform: translateX(0);
+  transition: transform 0.3s ease;
+  
+  // Responsive design from tabs downwards
+  @media (max-width: 1023px) {
+    transform: translateX(-100%);
+    &.open {
+      transform: translateX(0);
+    }
+  }
 }
-
 .organizationSwitcher {
   display: flex;
   align-items: center;

@@ -4,9 +4,16 @@ import Image from "next/image";
 import { NavLinks } from "./links";
 import styles from "./styles.module.scss";
 
-export const SideBar: React.FC = () => {
+type SideBarProps = {
+  isOpen: boolean;
+  onClose: () => void;
+};
+
+export const SideBar: React.FC<SideBarProps> = ({ isOpen }) => {
   return (
-    <aside className={styles.sidebarContainer}>
+    <aside
+      className={`${styles.sidebarContainer} ${isOpen ? styles.open : ""}`}
+    >
       {/* Organization Switcher */}
       <div className={styles.organizationSwitcher}>
         <div className={styles.orgIcon}>
