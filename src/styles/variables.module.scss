@@ -13,7 +13,10 @@ $green: #39cd62;
 $light-green: #f3fcf6;
 $inactive-gray: #545f7d26;
 $gray: #e6e7ec;
-$shadow:0 2px 8px rgba(0, 0, 0, 0.1);
+$shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+$gray-shade-2: #7a8cb1;
+$gray-shade-3: #e0e0e0;
+$gray-shade-4: #ccc;
 
 :export {
   primaryColor: $primary-color;
@@ -30,6 +33,9 @@ $shadow:0 2px 8px rgba(0, 0, 0, 0.1);
   greenColor: $green;
   lightGreen: $light-green;
   inactiveGray: $inactive-gray;
-  grayColor:$gray;
-  boxShadowColor:$shadow
+  grayColor: $gray;
+  boxShadowColor: $shadow;
+  grayShadeTwo: $gray-shade-2;
+  grayShadeThree: $gray-shade-3;
+  grayShadeFour: $gray-shade-4;
 }

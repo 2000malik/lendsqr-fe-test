@@ -1,9 +1,33 @@
 import React from "react";
-// 
-import styles from "./styles.module.scss"
+import Image from "next/image";
+//
+import { NavLinks } from "./links";
+import styles from "./styles.module.scss";
+
 export const SideBar: React.FC = () => {
-  return <aside className={styles.sidebarContainer}>index
-  
-  knkmnkkmk Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima, ratione inventore voluptas unde et nesciunt deserunt, itaque minus atque velit optio nam laboriosam culpa eveniet quasi adipisci beatae impedit esse.
-  </aside>;
+  return (
+    <aside className={styles.sidebarContainer}>
+      {/* Organization Switcher */}
+      <div className={styles.organizationSwitcher}>
+        <div className={styles.orgIcon}>
+          <Image
+            src="/assets/svgs/briefcase.svg"
+            alt="Organization"
+            width={20}
+            height={20}
+          />
+        </div>
+        <span className={styles.orgText}>Switch Organization</span>
+        <div className={styles.dropdownIcon}>
+          <Image
+            src="/assets/svgs/arrow-down.svg"
+            alt="Dropdown"
+            width={16}
+            height={16}
+          />
+        </div>
+      </div>
+      <NavLinks />
+    </aside>
+  );
 };
