@@ -1,7 +1,20 @@
-import React from 'react'
+import React from "react";
+//
+import { Column } from "./column";
+import styles from "./styles.module.scss";
 
-export const Table:React.FC = () => {
+type Props = {
+  columns: string[];
+};
+
+export const Table: React.FC<Props> = ({ columns }) => {
   return (
-    <div>table</div>
-  )
-}
+    <div className={styles.tableWrapper}>
+      <table>
+        <thead>
+          <Column tableHeaders={columns} />
+        </thead>
+      </table>
+    </div>
+  );
+};

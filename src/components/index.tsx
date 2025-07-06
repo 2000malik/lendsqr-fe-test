@@ -9,3 +9,4 @@ export { SideBar } from "./layouts/sidebar";
 export { Header } from "./header";
 export { SummaryCard } from "./cards/summary";
 export { StatusChip } from "./chip";
+export { Column } from "./table/column";

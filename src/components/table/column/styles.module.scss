@@ -1,0 +1,11 @@
+@import "../../../styles/variables.module.scss";
+
+.tableHead {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-weight: 600;
+  font-size: 12px;
+  text-transform: uppercase;
+  color: $text-color;
+}
