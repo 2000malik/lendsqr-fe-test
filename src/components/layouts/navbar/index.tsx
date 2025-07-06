@@ -3,6 +3,8 @@ import React from "react";
 import Link from "next/link";
 import Image from "next/image";
 //
+import { RoutePath } from "@/src/constants/routes";
+//
 import { Button } from "../../button";
 import styles from "./styles.module.scss";
 import { SearchInput } from "../../form/search-input";
@@ -11,14 +13,17 @@ export const NavBar: React.FC = () => {
   return (
     <header className={styles.header}>
       <div className={styles.rightSection}>
-        <Image
-          src="/assets/svgs/logo.svg"
-          alt="Logo"
-          width={174}
-          height={36}
-          loading="lazy"
-        />
-        <SearchInput />
+        <Link href={RoutePath.USER}>
+          <Image
+            src="/assets/svgs/logo.svg"
+            alt="Logo"
+            width={174}
+            height={36}
+            loading="lazy"
+          />
+        </Link>
+
+        <SearchInput className={styles.searchContainer} />
       </div>
       <div className={styles.leftSection}>
         <Link href="#" className={styles.docs}>
@@ -55,6 +60,15 @@ export const NavBar: React.FC = () => {
           </div>
         </Button>
       </div>
+      <Button className={styles.menuBtn}>
+        <Image
+          src="/assets/svgs/bar.svg"
+          alt="Logo"
+          width={50}
+          height={25}
+          loading="lazy"
+        />
+      </Button>
     </header>
   );
 };

@@ -40,13 +40,13 @@ export const SearchInput: React.FC<Props> = ({
   };
 
   return (
-    <div className={styles.searchContainer}>
+    <div className={`${styles.searchContainer} ${className || ""}`}>
       <Input
         value={searchValue}
         placeholder={placeholder}
         onChange={handleChange}
         onKeyDown={handleKeyDown}
-        className={`${styles.searchInput} ${className || ""}`}
+        className={`${styles.searchInput}`}
         style={style}
         aria-label={placeholder}
         {...rest}

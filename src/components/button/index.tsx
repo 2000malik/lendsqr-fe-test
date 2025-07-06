@@ -6,12 +6,23 @@ import styles from "./styles.module.scss";
 type Props = {
   children: React.ReactNode;
   loading?: boolean;
+  className?: string;
   sx?: CSSProperties;
 } & React.ButtonHTMLAttributes<HTMLButtonElement>;
 
-export const Button: React.FC<Props> = ({ children, loading, sx, ...rest }) => {
+export const Button: React.FC<Props> = ({
+  children,
+  loading,
+  className,
+  sx,
+  ...rest
+}) => {
   return (
-    <button className={styles.styleButton} style={sx} {...rest}>
+    <button
+      className={`${styles.styleButton} ${className || ""}`}
+      style={sx}
+      {...rest}
+    >
       {loading ? (
         <Image
           src="/assets/svgs/spinner.svg"
