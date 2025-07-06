@@ -11,7 +11,7 @@ export const Login = () => {
       <h2>Welcome!</h2>
       <p>Enter details to login.</p>
       {/* <div className={styles.inputGroup}> */}
-      <Input type="email" placeholder="Email" name="email" required />
+      <Input type="email" placeholder="Email" name="email" required autoFocus />
 
       <PasswordInput placeholder="Password" name="password" required />
 
