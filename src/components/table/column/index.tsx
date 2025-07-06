@@ -5,8 +5,15 @@ import FilterIcon from "@/public/assets/svgs/filter.svg";
 //
 import styles from "./styles.module.scss";
 
+
+export type ColumnConfig = {
+  key: string;
+  label: string;
+  render?: (value: any, row: any) => React.ReactNode;
+};
+
 type Props = {
-  tableHeaders: string[];
+  tableHeaders: ColumnConfig[];
 };
 
 export const Column: React.FC<Props> = ({ tableHeaders }) => {
@@ -16,7 +23,7 @@ export const Column: React.FC<Props> = ({ tableHeaders }) => {
         return (
           <th key={index}>
             <div className={styles.tableHead}>
-              <span>{header}</span>
+              <span>{header.label}</span>
               <FilterIcon />
             </div>
           </th>

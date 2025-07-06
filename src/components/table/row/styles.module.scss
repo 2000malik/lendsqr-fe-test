@@ -1,0 +1,14 @@
+.tableRow {
+  border-bottom: 1px solid #eee;
+
+  &:hover {
+    background-color: #f9f9f9;
+  }
+}
+
+.cell {
+  padding: 12px 8px;
+  font-size: 14px;
+  color: #333;
+  white-space: nowrap;
+}

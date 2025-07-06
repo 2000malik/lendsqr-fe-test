@@ -3,17 +3,26 @@ import React from "react";
 //
 import { Header, StatusChip, SummaryCard, Table } from "@/src/components";
 //
-import { summaryCardData } from "./data";
+import { summaryCardData, tableData } from "./data";
 import styles from "./styles.module.scss";
+import { ColumnConfig } from "@/src/components/table/column";
 
 export const Dashboard = () => {
-  const tableHeaders = [
-    "organization",
-    "Username",
-    "Email",
-    "Phone number",
-    "Date joined",
-    "Status",
+  const tableHeaders: ColumnConfig[] = [
+    { key: "username", label: "Username" },
+    { key: "email", label: "Email" },
+    {
+      key: "status",
+      label: "Status",
+      render: (value: string) => <StatusChip status={value} />,
+    },
+    {
+      key: "actions",
+      label: "Actions",
+      render: (_: unknown, row: { username: string }) => (
+        <button onClick={() => alert(row.username)}>View</button>
+      ),
+    },
   ];
   return (
     <div className={styles.dashboardContainer}>
@@ -23,9 +32,8 @@ export const Dashboard = () => {
           <SummaryCard key={label} label={label} Icon={Icon} value={value} />
         ))}
       </div>
-        {/* <StatusChip status="Active" /> */}
 
-      <Table columns={tableHeaders} />
+      <Table columns={tableHeaders} data={tableData} />
     </div>
   );
 };
