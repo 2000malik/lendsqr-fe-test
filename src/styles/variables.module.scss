@@ -13,6 +13,7 @@ $green: #39cd62;
 $light-green: #f3fcf6;
 $inactive-gray: #545f7d26;
 $gray: #e6e7ec;
+$shadow:0 2px 8px rgba(0, 0, 0, 0.1);
 
 :export {
   primaryColor: $primary-color;
@@ -29,5 +30,6 @@ $gray: #e6e7ec;
   greenColor: $green;
   lightGreen: $light-green;
   inactiveGray: $inactive-gray;
-  grayColor:$gray
+  grayColor:$gray;
+  boxShadowColor:$shadow
 }

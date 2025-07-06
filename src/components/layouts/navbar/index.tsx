@@ -1,7 +1,60 @@
-import React from 'react'
+"use client";
+import React from "react";
+import Link from "next/link";
+import Image from "next/image";
+//
+import { Button } from "../../button";
+import styles from "./styles.module.scss";
+import { SearchInput } from "../../form/search-input";
 
-export const  NavBar: React.FC = () => {
+export const NavBar: React.FC = () => {
   return (
-    <div>navbar.index</div>
-  )
-}
+    <header className={styles.header}>
+      <div className={styles.rightSection}>
+        <Image
+          src="/assets/svgs/logo.svg"
+          alt="Logo"
+          width={174}
+          height={36}
+          loading="lazy"
+        />
+        <SearchInput />
+      </div>
+      <div className={styles.leftSection}>
+        <Link href="#" className={styles.docs}>
+          Docs
+        </Link>
+        <Link href="#">
+          <Image
+            src="/assets/svgs/notification.svg"
+            alt="Logo"
+            width={17}
+            height={36}
+            loading="lazy"
+          />
+        </Link>
+
+        <Image
+          src="/assets/svgs/avatar.svg"
+          alt="Logo"
+          width={70}
+          height={56}
+          loading="lazy"
+        />
+
+        <Button className={styles.username}>
+          <span>Adedeji</span>
+          <div>
+            <Image
+              src="/assets/svgs/dropdown.svg"
+              alt="Logo"
+              width={27}
+              height={36}
+              loading="lazy"
+            />
+          </div>
+        </Button>
+      </div>
+    </header>
+  );
+};

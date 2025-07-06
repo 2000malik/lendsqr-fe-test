@@ -1,0 +1,38 @@
+// components/SearchInput/search-input.module.scss
+@import "../../../styles/variables.module.scss";
+
+.searchContainer {
+  display: flex;
+
+  position: relative;
+}
+.searchInput {
+  border: 1px solid $header-color;
+  border-top-right-radius: 0;
+  border-top-left-radius: 8px;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 8px;
+  border-right: none;
+  height: 40px;
+  padding-left: 20px;
+  opacity: 0.5;
+  width: 400px;
+}
+
+.searchButton {
+  background-color: $primary-color;
+  border: none;
+  border-radius: 0 8px 8px 0;
+  padding: 0 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  color: $white;
+  min-width: 56px;
+  height: 40px;
+
+  &:hover {
+    background-color: $primary-color;
+  }
+}
