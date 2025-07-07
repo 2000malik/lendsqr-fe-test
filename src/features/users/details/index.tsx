@@ -1,11 +1,15 @@
-import React from 'react'
+import React from "react";
+//
+import { Header, Stack } from "@/src/components";
 
-type Props={
-    id:string
-}
-export const UserDetails = ({id}:Props) => {
-      console.log({ id });
+type Props = {
+  id: string;
+};
+export const UserDetails = ({ id }: Props) => {
   return (
-    <div>UserDetails</div>
-  )
-}
+    <Stack>
+      {id}
+      <Header title="Users Details" />
+    </Stack>
+  );
+};

@@ -1,0 +1,6 @@
+.container {
+  display: flex;
+  @media (max-width: 1023px) {
+    flex-wrap: wrap;
+  }
+}
