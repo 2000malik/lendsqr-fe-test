@@ -1,14 +1,17 @@
+"use client";
 import React from "react";
+//
+import MoreIcon from "@/public/assets/svgs/more.svg";
 //
 import { StatusChip, Table } from "@/src/components";
 import { ColumnConfig } from "@/src/components/table/column";
 //
-
+import styles from "../styles.module.scss";
 export type TableRow = {
   username: string;
   organization: string;
   phone_number: string;
-  date:string
+  date: string;
   email: string;
   status: string;
   actions?: null;
@@ -32,7 +35,12 @@ export const DashboardTable: React.FC<Props> = ({ data }) => {
       key: "actions",
       label: "",
       render: (_: unknown, row: { username: string }) => (
-        <button onClick={() => alert(row.username)}>View</button>
+        <button
+          className={styles.viewMoreBtn}
+          onClick={() => alert(row.username)}
+        >
+          <MoreIcon />
+        </button>
       ),
     },
   ];
