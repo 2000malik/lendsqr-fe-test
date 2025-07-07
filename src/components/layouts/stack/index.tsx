@@ -4,8 +4,13 @@ import styles from "./styles.module.scss";
 //
 type Props = {
   children: ReactNode;
+  className?: string;
 };
 
-export const Stack: React.FC<Props> = ({ children }) => {
-  return <div className={styles.dashboardContainer}>{children}</div>;
+export const Stack: React.FC<Props> = ({ children, className }) => {
+  return (
+    <div className={`${styles.dashboardContainer} ${className || ""}`}>
+      {children}
+    </div>
+  );
 };

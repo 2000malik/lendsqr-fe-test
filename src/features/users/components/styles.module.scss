@@ -1,0 +1,55 @@
+@import "../../../styles//variables.module.scss";
+
+.modalContainer {
+  background-color: $white;
+  border-radius: 10px;
+  box-shadow: $shadow;
+  padding: 20px;
+  max-width: 470px;
+  width: 100%;
+  max-height: 600px;
+  position: relative;
+  border: 1px solid $gray-shade-11;
+  overflow: scroll;
+  scroll-behavior: auto;
+  scrollbar-width: none;
+  @media (max-width: 1023px) {
+    max-width: 90%;
+  }
+}
+
+.modalOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: $overlay-bg;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  padding: 20px;
+}
+
+.closeButton {
+  position: absolute;
+  top: 10px;
+  right: 12px;
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.inputLabel {
+  font-weight: 500;
+  font-size: 14px;
+  color: $text-color;
+  border: 1px solid $gray-shade-6;
+  border-radius: 8px;
+}
+.formStack {
+  gap: 10px;
+  margin-top: 10px;
+}

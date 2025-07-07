@@ -20,6 +20,11 @@ $gray-shade-4: #ccc;
 $gray-shade-5: #f2f3f7;
 $gray-shade-6: #e2e5eb;
 $gray-shade-7: #f9f9f9;
+$gray-shade-8: #f0f0f0;
+$gray-shade-9: #f8f9fa;
+$gray-shade-10: #e6f3ff;
+$gray-shade-11: #e8e9ed;
+$overlay-bg: rgba(0, 0, 0, 0.2);
 
 :export {
   primaryColor: $primary-color;
@@ -44,4 +49,9 @@ $gray-shade-7: #f9f9f9;
   grayShadeFive: $gray-shade-5;
   grayShadeSix: $gray-shade-6;
   grayShadeSeven: $gray-shade-7;
+  grayShadeEight: $gray-shade-8;
+  grayShadeNine: $gray-shade-9;
+  grayShadeTen: $gray-shade-10;
+  grayShadeEleven: $gray-shade-11;
+  overlayBg: $overlay-bg;
 }

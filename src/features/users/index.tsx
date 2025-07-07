@@ -1,13 +1,15 @@
 "use client";
-import React from "react";
+import React, { useState } from "react";
 //
 import { Button, Header, Stack, SummaryCard } from "@/src/components";
 //
 import styles from "./styles.module.scss";
 import { DashboardTable } from "../dashboard/table";
 import { summaryCardData, tableData } from "../dashboard/data";
+import { FilterModal } from "./components/filter-modal";
 
 export const Users = () => {
+  const [showModal, setShowModal] = useState(false);
   return (
     <Stack>
       <Header title="Users" />
@@ -17,9 +19,12 @@ export const Users = () => {
         ))}
       </div>
       <div className={styles.filterButtonContainer}>
-        <Button className={styles.filterBtn}>Filter</Button>
+        <Button className={styles.filterBtn} onClick={() => setShowModal(true)}>
+          Filter
+        </Button>
       </div>
-        <DashboardTable data={tableData} />
+      <FilterModal show={showModal} onClose={() => setShowModal(false)} />
+      <DashboardTable data={tableData} />
     </Stack>
   );
 };

@@ -12,7 +12,7 @@
   z-index: 1000;
   transform: translateX(0);
   transition: transform 0.3s ease;
-  
+
   // Responsive design from tabs downwards
   @media (max-width: 1023px) {
     transform: translateX(-100%);
@@ -26,12 +26,12 @@
   align-items: center;
   padding: 24px 20px;
   gap: 12px;
-  border-bottom: 1px solid #f0f0f0;
+  border-bottom: 1px solid $gray-shade-8;
   cursor: pointer;
   transition: background-color 0.2s ease;
 
   &:hover {
-    background-color: #f8f9fa;
+    background-color: $gray-shade-9;
   }
 
   .orgIcon {
@@ -40,7 +40,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: #e6f3ff;
+    background-color: $gray-shade-10;
     border-radius: 4px;
     flex-shrink: 0;
   }
@@ -48,7 +48,7 @@
   .orgText {
     font-size: 16px;
     font-weight: 500;
-    color: #213f7d;
+    color: $header-color;
     flex: 1;
   }
 
