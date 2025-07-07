@@ -1,7 +1,8 @@
-import React from 'react'
+import React from "react";
 
-export const Select:React.FC = () => {
-  return (
-    <div>index</div>
-  )
-}
+type Props = {
+  options: { label: string; value: string }[];
+};
+export const Select: React.FC = () => {
+  return <div>index</div>;
+};

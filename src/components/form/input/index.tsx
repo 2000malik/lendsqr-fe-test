@@ -2,6 +2,7 @@ import React, { CSSProperties } from "react";
 //
 import styles from "./input-styles.module.scss";
 import { Label } from "../label";
+import { Stack } from "../../layouts/stack";
 
 type Props = {
   type?: string;
@@ -20,7 +21,7 @@ export const Input: React.FC<Props> = ({
   ...rest
 }) => {
   return (
-    <div className={styles.container}>
+    <Stack className={styles.container}>
       {label && <Label htmlFor={rest.name}>{label}</Label>}
       <input
         className={`${styles.input} ${className || ""}`}
@@ -29,6 +30,6 @@ export const Input: React.FC<Props> = ({
         style={sx}
         {...rest}
       />
-    </div>
+    </Stack>
   );
 };
