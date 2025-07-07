@@ -1,7 +1,7 @@
 "use client";
 import React from "react";
 //
-import { Header, SummaryCard } from "@/src/components";
+import { Header, Stack, SummaryCard } from "@/src/components";
 //
 import { summaryCardData, tableData } from "./data";
 import styles from "./styles.module.scss";
@@ -9,7 +9,7 @@ import { DashboardTable } from "./table";
 
 export const Dashboard = () => {
   return (
-    <div className={styles.dashboardContainer}>
+    <Stack>
       <Header title="Users" />
       <div className={styles.cardGrid}>
         {summaryCardData.map(({ label, Icon, value }) => (
@@ -18,6 +18,6 @@ export const Dashboard = () => {
       </div>
 
       <DashboardTable data={tableData} />
-    </div>
+    </Stack>
   );
 };
