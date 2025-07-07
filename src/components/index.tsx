@@ -12,3 +12,4 @@ export { StatusChip } from "./chip";
 export { Column } from "./table/column";
 export { Stack } from "./layouts/stack";
 export { Select } from "./form/select";
+export { Flex } from "./layouts/flex";

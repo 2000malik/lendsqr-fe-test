@@ -1,0 +1,42 @@
+@import "../../../styles/variables.module.scss";
+
+.backBtn {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  height: 30px;
+  align-self: start;
+  width: 152px;
+  white-space: nowrap;
+  background-color: transparent;
+  color: $text-color;
+  border: none;
+  font-size: 16px;
+  font-weight: 400;
+  text-transform: none;
+  &:hover {
+    background-color: inherit;
+  }
+}
+.actionSection {
+  justify-content: space-between;
+  gap: 15px;
+}
+.actionBtnContainer {
+  gap: 15px;
+}
+.actionBtn {
+  height: 40px;
+  width: 170px;
+  color: $red;
+  border: 1px solid $red;
+  background-color: transparent;
+  text-transform: uppercase;
+  &--green {
+    color: $primary-color;
+    border-color: $primary-color;
+  }
+  &:hover {
+    background-color: inherit;
+  }
+}
