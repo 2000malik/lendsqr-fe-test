@@ -1,22 +1,16 @@
 "use client";
 import React from "react";
 //
-import { Input, Stack } from "@/src/components";
+import { Input, Select, Stack } from "@/src/components";
 //
 import styles from "./styles.module.scss";
 
 export const FilterForm = () => {
+  const option = [{ label: "lendsqr", value: "lendsqr" }];
   return (
     <form>
       <Stack className={styles.formStack}>
-        <Input
-          className={styles.inputLabel}
-          label="Email"
-          type="email"
-          placeholder="Email"
-          name="email"
-          required
-        />
+        <Select label="Organization" options={option} />
         <Input
           className={styles.inputLabel}
           label="Username"
@@ -49,6 +43,7 @@ export const FilterForm = () => {
           name="phone_number"
           required
         />
+        <Select label="Status" options={option} />
       </Stack>
     </form>
   );
