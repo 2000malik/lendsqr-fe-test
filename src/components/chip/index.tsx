@@ -28,7 +28,7 @@ const getStatusTextColor = (status: string) => {
     case "Blacklisted":
       return variables.redColor;
     default:
-      return variables.grayColor;
+      return variables.textColor;
   }
 };
 
@@ -46,6 +46,7 @@ export const StatusChip: React.FC<Props> = ({ status }) => {
         fontSize: 14,
         background: getStatusColor(status),
         color: getStatusTextColor(status),
+        boxShadow: variables.boxShadowColor,
       }}
     >
       <p> {status}</p>

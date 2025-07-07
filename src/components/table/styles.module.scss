@@ -1,4 +1,10 @@
+@import "../../styles//variables.module.scss";
 .tableWrapper {
   width: 100%;
   overflow-x: auto;
+  border-radius: 10px;
+  min-height: 640px;
+  background-color: $white;
+  box-shadow: $shadow;
+  padding: 20px;
 }

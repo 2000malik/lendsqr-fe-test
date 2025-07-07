@@ -1,14 +1,16 @@
+@import "../../../styles//variables.module.scss";
 .tableRow {
-  border-bottom: 1px solid #eee;
+  border-bottom: 1px solid $gray-shade-6;
 
   &:hover {
-    background-color: #f9f9f9;
+    background-color: $gray-shade-7;
   }
 }
 
 .cell {
   padding: 12px 8px;
   font-size: 14px;
-  color: #333;
+  font-weight: 400;
+  color: $text-color;
   white-space: nowrap;
 }

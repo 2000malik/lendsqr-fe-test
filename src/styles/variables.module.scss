@@ -18,6 +18,8 @@ $gray-shade-2: #7a8cb1;
 $gray-shade-3: #e0e0e0;
 $gray-shade-4: #ccc;
 $gray-shade-5: #f2f3f7;
+$gray-shade-6: #e2e5eb;
+$gray-shade-7: #f9f9f9;
 
 :export {
   primaryColor: $primary-color;
@@ -40,4 +42,6 @@ $gray-shade-5: #f2f3f7;
   grayShadeThree: $gray-shade-3;
   grayShadeFour: $gray-shade-4;
   grayShadeFive: $gray-shade-5;
+  grayShadeSix: $gray-shade-6;
+  grayShadeSeven: $gray-shade-7;
 }
