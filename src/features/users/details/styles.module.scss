@@ -83,6 +83,9 @@
     font-weight: 400;
     font-size: 12px;
   }
+  @media (max-width: 600px) {
+    margin-bottom: 25px;
+  }
 }
 .basicInfoStack {
   gap: 10px;
