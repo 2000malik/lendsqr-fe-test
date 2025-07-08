@@ -1,3 +1,4 @@
+@import "../../styles/variables.module.scss";
 .cardGrid {
   display: grid;
   gap: 20px;
@@ -22,4 +23,15 @@
 }
 .filterBtn {
   height: 35px;
+}
+.basicInfoContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: $white;
+  box-shadow: $shadow;
+  min-height: 210px;
+  width: 100%;
+  border-radius: 10px;
+  padding: 25px 25px 0 25px;
 }

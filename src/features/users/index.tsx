@@ -1,13 +1,19 @@
 "use client";
 import React, { useState } from "react";
+import dynamic from "next/dynamic";
 //
 import { Button, Header, Stack, SummaryCard } from "@/src/components";
 //
 import styles from "./styles.module.scss";
 import { DashboardTable } from "../dashboard/table";
 import { summaryCardData, tableData } from "../dashboard/data";
-import { FilterModal } from "./components/filter-modal";
 
+const FilterModal = dynamic(
+  () => import("./components/filter-modal").then((mod) => mod.FilterModal),
+  {
+    ssr: false,
+  }
+);
 export const Users = () => {
   const [showModal, setShowModal] = useState(false);
   return (
