@@ -17,7 +17,7 @@ export const NavBar: React.FC<NavBarProps> = ({ isOpen, onToggleSidebar }) => {
   return (
     <header className={styles.header}>
       <div className={styles.rightSection}>
-        <Link href={RoutePath.USER}>
+        <Link href={RoutePath.DASHBOARD}>
           <Image
             src="/assets/svgs/logo.svg"
             alt="Logo"

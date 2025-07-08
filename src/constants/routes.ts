@@ -1,5 +1,5 @@
 export const RoutePath = {
-  LOGIN: "/login",
+  LOGIN: "/",
   USER: "/users",
-  DASHBOARD: "/",
+  DASHBOARD: "/dashboard",
 } as const;
