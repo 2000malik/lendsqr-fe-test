@@ -1,0 +1,30 @@
+@import "../../styles/variables.module.scss";
+.tabContainer {
+  gap: 20px;
+  width: 100%;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  flex-wrap: nowrap !important;
+  white-space: nowrap;
+  scrollbar-width: none;
+  @media (max-width: 1024px) {
+  gap: 10px;
+  }
+}
+.tabBtn {
+  border: none;
+  border-radius: 0;
+  width: 170px;
+  flex-shrink: 0;
+  height: 29px;
+  background-color: transparent;
+  font-weight: 400;
+  color: $black;
+  &:hover {
+    background-color: transparent;
+  }
+  &--active {
+    color: $primary-color;
+    border-bottom: 2px solid $primary-color;
+  }
+}

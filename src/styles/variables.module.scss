@@ -25,6 +25,7 @@ $gray-shade-9: #f8f9fa;
 $gray-shade-10: #e6f3ff;
 $gray-shade-11: #e8e9ed;
 $overlay-bg: rgba(0, 0, 0, 0.2);
+$black: #333333;
 
 :export {
   primaryColor: $primary-color;
@@ -54,4 +55,5 @@ $overlay-bg: rgba(0, 0, 0, 0.2);
   grayShadeTen: $gray-shade-10;
   grayShadeEleven: $gray-shade-11;
   overlayBg: $overlay-bg;
+  blackColor: $black;
 }

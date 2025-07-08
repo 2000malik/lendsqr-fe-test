@@ -4,8 +4,9 @@ import { useRouter } from "next/navigation";
 //
 import { RoutePath } from "@/src/constants/routes";
 import ArrowIcon from "@/public/assets/svgs/back-arrow.svg";
-import { Button, Flex, Header, Stack } from "@/src/components";
+import { Button, Flex, Header, Stack, Tabs } from "@/src/components";
 //
+import { tabsOption } from "../data";
 import styles from "./styles.module.scss";
 
 type Props = {
@@ -33,6 +34,7 @@ export const UserDetails = ({ id }: Props) => {
           </Button>
         </Flex>
       </Flex>
+      <Tabs options={tabsOption} />
       {id}
     </Stack>
   );
