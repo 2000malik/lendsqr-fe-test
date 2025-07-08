@@ -9,6 +9,7 @@ import { Button, Flex, Header, Stack,  } from "@/src/components";
 
 import styles from "./styles.module.scss";
 import { BasicInfo } from "./basic-info";
+import { GeneralInfo } from "./general-details";
 
 type Props = {
   id: string;
@@ -36,6 +37,7 @@ export const UserDetails = ({ id }: Props) => {
         </Flex>
       </Flex>
     <BasicInfo/>
+    <GeneralInfo/>
       {id}
     </Stack>
   );
