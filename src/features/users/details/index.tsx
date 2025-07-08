@@ -4,7 +4,7 @@ import { useRouter } from "next/navigation";
 //
 import { RoutePath } from "@/src/constants/routes";
 import ArrowIcon from "@/public/assets/svgs/back-arrow.svg";
-import { Button, Flex, Header, Stack,  } from "@/src/components";
+import { Button, Flex, Header, Stack } from "@/src/components";
 //
 
 import styles from "./styles.module.scss";
@@ -36,8 +36,8 @@ export const UserDetails = ({ id }: Props) => {
           </Button>
         </Flex>
       </Flex>
-    <BasicInfo/>
-    <GeneralInfo/>
+      <BasicInfo />
+      <GeneralInfo />
       {id}
     </Stack>
   );

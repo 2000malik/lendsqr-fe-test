@@ -64,8 +64,22 @@
   }
   //
 }
-.resetBtn{
-    background-color: transparent;
-    border: 1px solid $text-color;
-    color: $text-color;
+.resetBtn {
+  background-color: transparent;
+  border: 1px solid $text-color;
+  color: $text-color;
+}
+.generalInfoSec {
+  gap: 15px;
+  color: $text-color;
+  p {
+    font-weight: 400;
+    font-size: 12px;
+    text-transform: uppercase;
+  }
+  h4 {
+    font-weight: 500;
+    font-size: 16px;
+    text-transform: capitalize;
+  }
 }

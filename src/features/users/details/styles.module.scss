@@ -45,7 +45,7 @@
   flex-direction: column;
   justify-content: space-between;
   background-color: $white;
-
+  overflow: hidden;
   min-height: 210px;
   width: 100%;
   border-radius: 5px;
@@ -59,27 +59,28 @@
   border-radius: 5px;
   padding: 25px;
   border: 1px solid $header-shade-1;
+  overflow: hidden;
 }
 .basicInfoUpperSec {
   gap: 20px;
   align-items: center;
   color: $header-color;
-  h4{
+  h4 {
     font-weight: 500;
     font-size: 20px;
   }
-  .userID{
+  .userID {
     color: $text-color;
     font-weight: 400;
     font-size: 14px;
   }
-  .userTire{
-      color: $text-color;
+  .userTire {
+    color: $text-color;
     font-weight: 600;
     font-size: 14px;
   }
-  .bankInfo{
-     font-weight: 400;
+  .bankInfo {
+    font-weight: 400;
     font-size: 12px;
   }
 }
@@ -96,5 +97,25 @@
     padding-inline: 0;
     border-left: none;
     border-right: none;
+  }
+}
+.header {
+  font-size: 14px;
+  font-weight: 600;
+}
+.genInfoStack {
+  gap: 10px;
+}
+.contentLayout {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 2rem;
+
+  @media (max-width: 1024px) {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  @media (max-width: 600px) {
+    grid-template-columns: 1fr;
   }
 }

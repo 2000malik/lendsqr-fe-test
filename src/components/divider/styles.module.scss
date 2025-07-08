@@ -1,0 +1,8 @@
+@import "@/src/styles/variables.module.scss";
+
+.divider {
+  border: none;
+  height: 0.1px;
+  background-color: $header-color;
+  width: 100%;
+}
