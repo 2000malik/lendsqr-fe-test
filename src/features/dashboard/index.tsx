@@ -1,13 +1,16 @@
 "use client";
-import React from "react";
+
 //
 import { Header, Stack, SummaryCard } from "@/src/components";
 //
-import { summaryCardData, tableData } from "./data";
+import { summaryCardData } from "./data";
 import styles from "./styles.module.scss";
 import { DashboardTable } from "./table";
+import { useGetUsers } from "../../hooks/useGetUsers";
 
 export const Dashboard = () => {
+  const { users, loading } = useGetUsers();
+
   return (
     <Stack>
       <Header title="Users" />
@@ -17,7 +20,7 @@ export const Dashboard = () => {
         ))}
       </div>
 
-      <DashboardTable data={tableData} />
+      <DashboardTable data={users} loading={loading} />
     </Stack>
   );
 };

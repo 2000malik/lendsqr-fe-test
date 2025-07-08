@@ -7,25 +7,16 @@ import { StatusChip, Table } from "@/src/components";
 import { ColumnConfig } from "@/src/components/table/column";
 //
 import styles from "../styles.module.scss";
-export type TableRow = {
-  username: string;
-  organization: string;
-  phone_number: string;
-  date: string;
-  email: string;
-  status: string;
-  actions?: null;
-};
 
-type Props = { data: TableRow[] };
+type Props = { data: userInfo[]; loading?: boolean };
 
-export const DashboardTable: React.FC<Props> = ({ data }) => {
+export const DashboardTable: React.FC<Props> = ({ data, loading }) => {
   const tableHeaders: ColumnConfig[] = [
     { key: "organization", label: "organization" },
     { key: "username", label: "Username" },
     { key: "email", label: "Email" },
-    { key: "phone_number", label: "phone number" },
-    { key: "date", label: "Date joined" },
+    { key: "phoneNumber", label: "phone number" },
+    { key: "dateJoined", label: "Date joined" },
     {
       key: "status",
       label: "Status",
@@ -45,5 +36,5 @@ export const DashboardTable: React.FC<Props> = ({ data }) => {
     },
   ];
 
-  return <Table columns={tableHeaders} data={data} />;
+  return <Table columns={tableHeaders} data={data} loading={loading} />;
 };

@@ -6,7 +6,8 @@ import { Button, Header, Stack, SummaryCard } from "@/src/components";
 //
 import styles from "./styles.module.scss";
 import { DashboardTable } from "../dashboard/table";
-import { summaryCardData, tableData } from "../dashboard/data";
+import { summaryCardData } from "../dashboard/data";
+import { useGetUsers } from "../../hooks/useGetUsers";
 
 const FilterModal = dynamic(
   () => import("./components/filter-modal").then((mod) => mod.FilterModal),
@@ -15,6 +16,7 @@ const FilterModal = dynamic(
   }
 );
 export const Users = () => {
+  const { users, loading } = useGetUsers();
   const [showModal, setShowModal] = useState(false);
   return (
     <Stack>
@@ -30,7 +32,7 @@ export const Users = () => {
         </Button>
       </div>
       <FilterModal show={showModal} onClose={() => setShowModal(false)} />
-      <DashboardTable data={tableData} />
+      <DashboardTable data={users} loading={loading} />
     </Stack>
   );
 };
