@@ -1,36 +1,72 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
-## Getting Started
+## lendsqr-fe-test
 
-First, run the development server:
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+##  Requirements
+| Tech |  Version   |
+| :--: | :--------: |
+| node | `v20.10.0` |
+| npm  |  `10.2.3`  |
+
+##  Technologies Used
+- **React 19**
+- **TypeScript**
+- **Next.js 15.3.5**
+- **SCSS for styling**
+
+
+## Setup
+
+1.- Clone the repo and install deps: `git clone repo_url && npm install`
+
+2.- Install deps: `npm install`
+
+4.- Run the app: `npm run dev`
+
+
+## GitFlow
+for purpose of this assessment a single branch was used through out development
+
+| Branch |        Environment         |
+| :----: | :------------------------: |
+| `main`  |  |
+for commit messages: for bug & updates fixes = patch: what-was-fixed
+                     for new features = feat: what-was-implemented
+
+
+## Folder Structure
+This project follows a **Feature-Based Structure**, which combines the organization of code by features with the encapsulation of components and their related files. This structure promotes modularity, reusability, and maintainability, making it suitable for large-scale applications.
+
+### app/
+
+- **`app/`**: Contains feature-specific directories.
+  - **`users/`**: Example feature directory.
+    - **`page.tsx`**: The main page component for the feature, which imports and renders the feature's components.
+
+### features/
+
+- **`features/`**: Contains common, reusable components used across multiple features.
+  - **`users/`**: Directory for dashboard components. .
+    - **`index.tsx`**: Example of a common component directory.
+    - **`data/`**: The component constants.
+     - **`component/`**: The component's folder specific to the feature only, not re-used across the app.
+        - **`general-info-label/`**: The component's logic.
+  - **`components/`**: Directory for common components.
+    - **`button/`**: Example of a common component directory.
+      - **`index.tsx`**: The component's logic.
+    - **`table/`**: Another common component.
+
+**Code example: app/dashboard/page.tsx**
+```js
+import React from 'react';
+import { Dashboard } from "@/src/features";
+
+export default function Home(){
+  return (
+    <div>
+      <Dasboard />
+    </div>
+  );
+};
+
 ```
-
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
