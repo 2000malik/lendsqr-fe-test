@@ -46,7 +46,7 @@ This project follows a **Feature-Based Structure**, which combines the organizat
 ### features/
 
 - **`features/`**: Contains common, reusable components used across multiple features.
-  - **`users/`**: Directory for dashboard components. .
+  - **`users/`**: Directory for users components. .
     - **`index.tsx`**: Example of a common component directory.
     - **`data/`**: The component constants.
      - **`component/`**: The component's folder specific to the feature only, not re-used across the app.
@@ -58,7 +58,7 @@ This project follows a **Feature-Based Structure**, which combines the organizat
       - **`index.tsx`**: The component's logic.
     - **`table/`**: Another common component.
          - **`index.tsx`**: The component's logic.
-         
+
 **Code example: app/dashboard/page.tsx**
 ```js
 import React from 'react';
