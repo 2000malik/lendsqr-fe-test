@@ -7,99 +7,97 @@ export const tabsOption = [
   { label: "App and System", value: "app" },
 ];
 
-export const personalInfo = (data?: unknown) => [
+export const personalInfo = (data?: userInfo) => [
   {
     label: "full Name",
-    value: "general",
+    value: data?.fullName ?? "",
   },
   {
     label: "Phone Number",
-    value: "general",
+    value: data?.phoneNumber ?? "",
   },
   {
     label: "Email Address",
-    value: "general",
+    value: data?.email ?? "",
   },
   {
     label: "Bvn",
-    value: "general",
+    value: data?.bvn ?? "",
   },
   {
     label: "Gender",
-    value: "general",
+    value: data?.gender ?? "",
   },
   {
     label: "Marital status",
-    value: "general",
+    value: data?.maritalStatus ?? "",
   },
   {
     label: "Children",
-    value: "general",
+    value: data?.children ?? "",
   },
   {
     label: "Type of residence",
-    value: "general",
+    value: data?.typeOfResidence ?? "",
   },
 ];
-export const educationInfo = (data?: unknown) => [
+export const educationInfo = (data?: userInfo) => [
   {
     label: "level of education",
-    value: "general",
+    value: data?.levelOfEducation ?? "",
   },
   {
     label: "employment status",
-    value: "general",
+    value: data?.employmentStatus ?? "",
   },
   {
     label: "sector of employment",
-    value: "general",
+    value: data?.sectorOfEmployment ?? "",
   },
   {
     label: "Duration of employment",
-    value: "general",
+    value: data?.durationOfEmployment ?? "",
   },
   {
     label: "office email",
-    value: "general",
+    value: data?.officeEmail ?? "",
   },
   {
     label: "Monthly income",
-    value: "general",
+    value: data?.monthlyIncome ?? "",
   },
   {
     label: "loan repayment",
-    value: "general",
+    value: data?.loanRepayment ?? "",
   },
 ];
-export const socialsInfo = (data?: unknown) => [
+export const socialsInfo = (data?: userInfo) => [
   {
     label: "Twitter",
-    value: "general",
+    value: data?.twitter ?? "",
   },
   {
     label: "Facebook",
-    value: "general",
+    value: data?.facebook ?? "",
   },
   {
     label: "Instagram",
-    value: "general",
+    value: data?.instagram ?? "",
   },
 ];
-export const GuarantorInfo = (data?: unknown) => [
-  {
-    label: "full Name",
-    value: "general",
-  },
-  {
-    label: "Phone Number",
-    value: "general",
-  },
-  {
-    label: "Email Address",
-    value: "general",
-  },
-  {
-    label: "Relationship",
-    value: "general",
-  },
-];
+export const GuarantorInfo = (data?: userInfo) => {
+  if (!data?.guarantors || !Array.isArray(data.guarantors)) return [];
+
+  return data?.guarantors?.flatMap((guarantor, index) => [
+    { label: ` Full Name`, value: guarantor.fullName ?? "" },
+    {
+      label: `Phone Number`,
+      value: guarantor.phoneNumber ?? "",
+    },
+    { label: ` Email`, value: guarantor.email  ?? ""},
+    {
+      label: `Relationship`,
+      value: guarantor.relationship ?? "",
+    },
+  ]);
+};

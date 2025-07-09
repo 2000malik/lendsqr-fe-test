@@ -6,7 +6,7 @@ import styles from "./styles.module.scss";
 
 type Props = {
   label: string;
-  value: string;
+  value: string | number;
 };
 
 export const GeneralInfoLabel: React.FC<Props> = ({ label, value }) => {

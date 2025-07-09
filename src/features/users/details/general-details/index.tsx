@@ -10,42 +10,44 @@ import {
 } from "../../data";
 import styles from "../styles.module.scss";
 import { GeneralInfoLabel } from "../../components/general-info-label";
-
-export const GeneralInfo = () => {
+type Props = {
+  data?: userInfo;
+};
+export const GeneralInfo = ({ data }: Props) => {
   return (
     <div className={styles.genInfoContainer}>
       <Stack>
         <Stack>
           <Header title="Personal Information" className={styles.header} />
           <div className={styles.contentLayout}>
-            {personalInfo()?.map(({ label, value }) => (
+            {personalInfo(data)?.map(({ label, value }) => (
               <GeneralInfoLabel key={label} label={label} value={value} />
             ))}
           </div>
         </Stack>
-        <Divider/>
+        <Divider />
         <Stack>
           <Header title="Education and Employment" className={styles.header} />
           <div className={styles.contentLayout}>
-            {educationInfo()?.map(({ label, value }) => (
+            {educationInfo(data)?.map(({ label, value }) => (
               <GeneralInfoLabel key={label} label={label} value={value} />
             ))}
           </div>
         </Stack>
-          <Divider/>
+        <Divider />
         <Stack>
           <Header title="Socials" className={styles.header} />
           <div className={styles.contentLayout}>
-            {socialsInfo()?.map(({ label, value }) => (
+            {socialsInfo(data)?.map(({ label, value }) => (
               <GeneralInfoLabel key={label} label={label} value={value} />
             ))}
           </div>
         </Stack>
-          <Divider/>
+        <Divider />
         <Stack>
           <Header title="Guarantor" className={styles.header} />
           <div className={styles.contentLayout}>
-            {GuarantorInfo()?.map(({ label, value }) => (
+            {GuarantorInfo(data)?.map(({ label, value }) => (
               <GeneralInfoLabel key={label} label={label} value={value} />
             ))}
           </div>

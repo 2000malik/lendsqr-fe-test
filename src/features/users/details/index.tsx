@@ -1,5 +1,5 @@
 "use client";
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
 //
 import { RoutePath } from "@/src/constants/routes";
@@ -10,12 +10,26 @@ import { Button, Flex, Header, Stack } from "@/src/components";
 import styles from "./styles.module.scss";
 import { BasicInfo } from "./basic-info";
 import { GeneralInfo } from "./general-details";
+import { getStorageItem } from "@/src/libs/utils";
 
 type Props = {
   id: string;
 };
 export const UserDetails = ({ id }: Props) => {
   const router = useRouter();
+  const [user, setUser] = useState<userInfo | null>(null);
+
+  useEffect(() => {
+    const storedUser = getStorageItem("user");
+    if (!storedUser) {
+      router.push(RoutePath.USER);
+    } else {
+      setUser(storedUser);
+    }
+  }, []);
+
+  if (!user) return null;
+
   return (
     <Stack>
       <Button
@@ -36,9 +50,8 @@ export const UserDetails = ({ id }: Props) => {
           </Button>
         </Flex>
       </Flex>
-      <BasicInfo />
-      <GeneralInfo />
-      {id}
+      <BasicInfo data={user} />
+      <GeneralInfo data={user} />
     </Stack>
   );
 };

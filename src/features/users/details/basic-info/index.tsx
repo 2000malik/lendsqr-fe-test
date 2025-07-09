@@ -8,24 +8,33 @@ import { Flex, Stack, Tabs } from "@/src/components";
 import { tabsOption } from "../../data";
 import styles from "../styles.module.scss";
 
-export const BasicInfo = () => {
+type Props = {
+  data?: userInfo;
+};
+export const BasicInfo = ({ data }: Props) => {
   return (
     <div className={styles.basicInfoContainer}>
       <Flex className={styles.basicInfoUpperSec}>
         <Avatar />
         <Stack className={styles.basicInfoStack}>
-          <h4>Grace Effiom</h4>
-          <p className={styles.userID}>LSQFf587g90</p>
+          <h4>{data?.fullName ?? ""}</h4>
+          <p className={styles.userID}>{data?.id ?? ""}</p>
         </Stack>
         <div className={styles.basicInfoWithBorder}>
           <Stack className={styles.basicInfoStack}>
             <p className={styles.userTire}>User’s Tier</p>
-            <StarIcon/>
+            <Flex>
+              {[...Array(data?.tier || 0)].map((_, i) => (
+                <StarIcon key={i} />
+              ))}
+            </Flex>
           </Stack>
         </div>
         <Stack className={styles.basicInfoStack}>
-          <h4>₦200,000.00</h4>
-          <p className={styles.bankInfo}>9912345678/Providus Bank</p>
+          <h4>{`₦${data?.accountBalance ?? ""}`}</h4>
+          <p className={styles.bankInfo}>
+            {`${data?.accountNumber ?? ""} / ${data?.bankName ?? ""}`}
+          </p>
         </Stack>
       </Flex>
 
