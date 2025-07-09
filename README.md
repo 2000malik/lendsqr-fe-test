@@ -51,11 +51,14 @@ This project follows a **Feature-Based Structure**, which combines the organizat
     - **`data/`**: The component constants.
      - **`component/`**: The component's folder specific to the feature only, not re-used across the app.
         - **`general-info-label/`**: The component's logic.
-  - **`components/`**: Directory for common components.
+  
+### components/
+- **`components/`**: Directory for common components.
     - **`button/`**: Example of a common component directory.
       - **`index.tsx`**: The component's logic.
     - **`table/`**: Another common component.
-
+         - **`index.tsx`**: The component's logic.
+         
 **Code example: app/dashboard/page.tsx**
 ```js
 import React from 'react';
